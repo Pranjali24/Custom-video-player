@@ -1,9 +1,10 @@
-var players = document.querySelector('.player');
+var progress = document.querySelector('.progress');
 var video=document.querySelector('.myvideos');
 var progresBar = document.querySelector('.progress__box');
 var playing = document.querySelector('.play');
 var speeds = document.querySelectorAll('.speed');
 var ranges = document.querySelectorAll('.playing__range');
+var screen=document.querySelector('.screen');
 
 video.addEventListener('click',handlePlaying);
 playing.addEventListener('click', handlePlaying);
@@ -32,7 +33,7 @@ function handleRanges(){
 
 // update Progress bar
 video.addEventListener('play',handleProgres);
-// video.addEventListener('change', handleProgres);
+video.addEventListener('change', handleProgres);
 function handleProgres(){
     console.log("duration change");
     
@@ -40,4 +41,12 @@ let currentTime=video.currentTime;
 let duration=video.duration;
 let progress = (currentTime / duration) * 100;
   document.querySelector('.progress__bar').style.flexBasis=`${progress}%`;   
+}
+// Add full Screen mode
+screen.addEventListener('click',fullScreenMode);
+function fullScreenMode(){
+  video.style.width="100vw";
+ progress.style.width = "100vw";
+    progresBar.style.width = "100vw";
+    
 }

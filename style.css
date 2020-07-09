@@ -67,10 +67,13 @@ h1{
     border: none;
     background-color: transparent;
     color:#000;
-    margin: .2rem .8rem;
+    margin: .2rem .6rem;
     outline: none;
     font-size: 1rem;
     color: #fff;
+}
+.screen:hover{
+    cursor: pointer;
 }
 .playing__range{
     -webkit-appearance: none;
