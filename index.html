@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>video player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Video Player</h1>
+    <div class="player">
+       <video src="Video Of People Waiting For A Taxi On A Rainy Night.mp4" type="video/mp4" class="myvideos"></video>
+      
+      
+         <div class="progress">
+         <button class="btn play">▶️</button>
+         <input type="range" min="0" max="1" value="0.2" name="volume" step="0.02" class="playing__range">
+         <input type="range" min="0" max="1" step="0.05" name="playbackRate" class="playing__range">
+         <button class="btn speed" data-skip="-10">&laquo; 10</button>
+         <button class="btn speed" data-skip="25">&raquo; 25</button>
+    </div>
+     <div class="progress__box">
+            <div class="progress__bar"></div>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
