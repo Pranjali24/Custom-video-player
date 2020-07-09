@@ -32,8 +32,7 @@ function handleRanges(){
 }
 
 // update Progress bar
-video.addEventListener('play',handleProgres);
-video.addEventListener('change', handleProgres);
+video.addEventListener('timeupdate',handleProgres);
 function handleProgres(){
     console.log("duration change");
     
@@ -47,6 +46,6 @@ screen.addEventListener('click',fullScreenMode);
 function fullScreenMode(){
   video.style.width="100vw";
  progress.style.width = "100vw";
-    progresBar.style.width = "100vw";
+ progresBar.style.width = "100vw";
     
 }
