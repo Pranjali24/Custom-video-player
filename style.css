@@ -16,27 +16,43 @@ h1{
     width: 500px;
     z-index: 1;
 }
-.myvideos :fullscreen{
+.player.fullscreen{
+    top: 0;
+    left: 0;
+}
+.myvideos.fullscreen{
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
+    left: 0; 
 }
 .myvideos:hover ~ .progress{
    cursor: pointer;
    opacity: 1;
 }
+/* all process like play , speed , volume etc */
 .progress{
     width: 500px;
     position: absolute;
     bottom: 0;
     opacity: 0;
-    transition: all .6s;
-    padding: 1rem 0;
+    transition: opacity .9s;
+    padding: 1rem 0 1.5rem;
     background-color: #222;
+}
+.progress.fullscreen{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-left: 11.5rem;
+    width: 73vw;
 }
 .progress:hover{
     opacity: 1;
     bottom: 0;
 }
+/* progress bar */
 .progress__box{
    width: 500px;
    margin-top: -.5rem;
@@ -44,6 +60,10 @@ h1{
    z-index: 12;
    display: flex;
    background-color: honeydew;
+}
+.progress__box.fullscreen{
+    margin-left: 11.5rem;
+    width: 73vw;
 }
 .myvideos:hover ~ .progress__box > .progress__bar{
   height: 10px;
@@ -55,23 +75,24 @@ h1{
     height: 6px;
     width: 500px;
     flex: 0;
-    flex-basis:60%;
+    flex-basis:0%;
     background: yellow;
-    transition: all .3s;
+    transition: all .2s;
 }
 
 .btn{    
     border: none;
     background-color: transparent;
     color:#000;
-    margin: .2rem .6rem;
     outline: none;
     font-size: 1rem;
     color: #fff;
+    margin: .2rem .6rem;
 }
 .screen:hover{
     cursor: pointer;
 }
+/* volume and speed button */
 .playing__range{
     -webkit-appearance: none;
     height: 5px;
